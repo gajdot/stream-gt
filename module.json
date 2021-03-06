@@ -1,0 +1,21 @@
+{
+    "name": "stream-gt",
+    "title": "Stream GT Module",
+    "description": "Simple module for streamers to be able to show Actors content for viewers.",
+    "version": "0.0.1",
+    "author": "gajdot",
+    "minimumCoreVersion": "0.7.9",
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "hu",
+            "name": "Magyar",
+            "path": "lang/hu.json"
+        }
+    ],
+    "url": "https://github.com/gajdot/stream-gt"
+}
