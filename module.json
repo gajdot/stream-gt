@@ -24,6 +24,7 @@
     "socket": true,
     "url": "https://github.com/gajdot/stream-gt",
     "manifest": "https://raw.githubusercontent.com/gajdot/stream-gt/main/module.json",
+    "download": "https://github.com/gajdot/stream-gt/archive/main.zip",
     "readme": "https://github.com/gajdot/stream-gt/blob/main/README.md",
     "bugs": "https://github.com/gajdot/stream-gt/issues",
     "changelog": "https://github.com/gajdot/stream-gt/blob/main/CHANGELOG.md"
