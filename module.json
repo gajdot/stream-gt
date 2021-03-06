@@ -4,7 +4,11 @@
     "description": "Simple module for streamers to be able to show Actors content for viewers.",
     "version": "0.0.1",
     "author": "gajdot",
-    "minimumCoreVersion": "0.7.9",
+    "minimumCoreVersion": "0.7.0",
+    "compatibleCoreVersion": "0.7.9",
+    "scripts": [
+        "scripts/stream-gt.js"
+    ],
     "languages": [
         {
             "lang": "en",
@@ -17,5 +21,10 @@
             "path": "lang/hu.json"
         }
     ],
-    "url": "https://github.com/gajdot/stream-gt"
+    "socket": true,
+    "url": "https://github.com/gajdot/stream-gt",
+    "manifest": "https://raw.githubusercontent.com/gajdot/stream-gt/main/module.json",
+    "readme": "https://github.com/gajdot/stream-gt/blob/main/README.md",
+    "bugs": "https://github.com/gajdot/stream-gt/issues",
+    "changelog": "https://github.com/gajdot/stream-gt/blob/main/CHANGELOG.md"
 }
