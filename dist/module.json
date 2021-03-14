@@ -9,16 +9,14 @@
     "scripts": [
         "scripts/stream-gt.js"
     ],
+    "styles": [
+        "./styles/stream-gt.css"
+    ],
     "languages": [
         {
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
-        },
-        {
-            "lang": "hu",
-            "name": "Magyar",
-            "path": "lang/hu.json"
         }
     ],
     "socket": true,

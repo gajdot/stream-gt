@@ -1,0 +1,27 @@
+{
+    "stream-gt": {
+        "settings": {
+            "enableOverlay": {
+                "name": "Enable Stream Overlay",
+                "hint": "Stream overlay can be set on and off from this setting"
+            },
+            "overlayOrientation": {
+                "name": "Orientation",
+                "horizontal": "Horizontal",
+                "vertical": "Vertical"
+            },
+            "hpPath": {
+                "name": "HP Variable Path",
+                "hint": "The path to the hp variable without including Actor (if it's 'Actor.data.hp.value' for example it'll be 'data.hp.value')"
+            },
+            "maxHpPath": {
+                "name": "Max HP Path",
+                "hint": "The path to the max hp variable"
+            },
+            "actorSelector": {
+                "name": "Shown Actors",
+                "label": "Select Actors"
+            }
+        }
+    }
+}

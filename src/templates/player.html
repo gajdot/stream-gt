@@ -1,0 +1,72 @@
+<header class="tidy5e-header">
+    <section class="profile-wrap">
+        <div class="profile">
+            {{!-- Portrait --}}
+            <div class="portrait">
+                <img class="player-image" src="{{actor.img}}" alt="{{actor.name}}"
+                    title="{{ localize 'TIDY5E.EditActorImage' }} / {{ localize 'TIDY5E.ShowActorImage' }}"
+                    data-edit="img">
+                <div class="portrait-menu hidden">
+                    <a class="showActorArt" id="showPortrait">{{ localize 'TIDY5E.ShowPortraitArt' }}</a>
+                    <a class="showActorArt" id="showToken">{{ localize 'TIDY5E.ShowTokenArt' }}</a>
+                </div>
+            </div>
+
+            {{!-- HP Overlay --}}
+            <div class="hp-overlay-wrapper">
+                <div class="hp-overlay"
+                    style="background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) calc(100% - ((100% / ({{data.attributes.hp.max}} + {{#if data.attributes.hp.tempmax}}{{data.attributes.hp.tempmax}}{{else}}0{{/if}} )) * ({{data.attributes.hp.value}} + {{#if data.attributes.hp.temp}}{{data.attributes.hp.temp}}{{else}}0{{/if}})) ), rgba(255,255,255,1) calc(100% - ((100% / ({{data.attributes.hp.max}} + {{#if data.attributes.hp.tempmax}}{{data.attributes.hp.tempmax}}{{else}}0{{/if}} )) * ({{data.attributes.hp.value}} + {{#if data.attributes.hp.temp}}{{data.attributes.hp.temp}}{{else}}0{{/if}})) ), rgba(255,255,255,1) 100%);">
+                </div>
+            </div>
+            {{!-- Resting --}}
+            <div class="rest-container has-note">
+                <div class="note">{{ localize 'TIDY5E.RestHint' }}</div>
+                <div class="resting">
+                    <span class="resting-icon"><i class="rest-icon fas fa-bed"></i></span>
+                    <a class="rest short-rest" title="{{ localize 'TIDY5E.RestS' }}"><i
+                            class="fas fa-hourglass-half"></i></a>
+                    <a class="rest long-rest" title="{{ localize 'TIDY5E.RestL' }}"><i
+                            class="fas fa-hourglass-end"></i></a>
+                </div>
+            </div>
+
+            {{!-- Hit Points --}}
+            <div class="portrait-hp" title="{{ localize 'DND5E.HitPoints' }}">
+                <div class="hp-bar" style="background: linear-gradient(
+								-90deg,
+								transparent 0%,
+								transparent calc(100% - ((100% / ({{#if (eq data.attributes.hp.max 0)}} 1 {{else}} {{data.attributes.hp.max}} {{/if}} + {{#if data.attributes.hp.tempmax}}{{data.attributes.hp.tempmax}}{{else}}0{{/if}} )) * ({{data.attributes.hp.value}} + {{#if data.attributes.hp.temp}}{{data.attributes.hp.temp}}{{else}}0{{/if}})) ),
+								 	rgba(0,200,0,0.5) calc(100% - ((100% / ({{#if (eq data.attributes.hp.max 0)}} 1 {{else}} {{data.attributes.hp.max}} {{/if}} + {{#if data.attributes.hp.tempmax}}{{data.attributes.hp.tempmax}}{{else}}0{{/if}} )) * ({{data.attributes.hp.value}} + {{#if data.attributes.hp.temp}}{{data.attributes.hp.temp}}{{else}}0{{/if}})) ),
+								 	rgba(0,200,0,0.5) 100%);">
+                </div>
+                <input class="hp-min" name="data.attributes.hp.value" type="text" value="{{data.attributes.hp.value}}"
+                    data-dtype="Number" placeholder="0" maxlength="5">
+                <span class="value-seperator">/</span>
+                <input class="hp-max" name="data.attributes.hp.max" type="text" value="{{data.attributes.hp.max}}"
+                    data-dtype="Number" placeholder="0" maxlength="5">
+            </div>
+        </div>
+
+        <div class="portrait-hp-formula health" title="{{ localize 'DND5E.HPFormula' }}">
+            <span class="rollable" title="{{ localize 'DND5E.HitDiceRoll'}}"><i class="fas fa-dice-six"></i></span>
+            <div class="formula-edit">
+                <input name="data.attributes.hp.formula" class="hpformula" type="text"
+                    placeholder="{{ localize 'DND5E.HPFormula' }}" value="{{data.attributes.hp.formula}}" maxlength="12"
+                    title="{{ localize 'DND5E.HPFormula' }}: {{data.attributes.hp.formula}}">
+            </div>
+        </div>
+
+        {{!-- Temp Hit Points --}}
+        <div class="portrait-temp">
+            <input name="data.attributes.hp.temp" type="text" class="temphp" placeholder="+{{ localize 'DND5E.Temp' }}"
+                title="+{{ localize 'DND5E.Temp' }}"
+                value="{{#if (eq data.attributes.hp.temp 0)}}{{else}}{{data.attributes.hp.temp}}{{/if}}"
+                data-dtype="Number" maxlength="5">
+            <input name="data.attributes.hp.tempmax" type="text" class="max-temphp"
+                placeholder="+{{ localize 'DND5E.Max' }}" title="+{{ localize 'DND5E.Max' }}"
+                value="{{#if (eq data.attributes.hp.tempmax 0)}}{{else}}{{data.attributes.hp.tempmax}}{{/if}}"
+                data-dtype="Number" maxlength="5">
+        </div>
+
+    </section>
+</header>

@@ -1,0 +1,28 @@
+{
+  "name": "stream-gt",
+  "version": "0.1.0",
+  "description": "Foundry VTT package to provide extra UI info for streamers",
+  "author": "gajdot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gajdot/stream-gt.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/gajdot/stream-gt/issues"
+  },
+  "homepage": "https://github.com/gajdot/stream-gt#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "chalk": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "fs-extra": "^9.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "webpack": "^5.25.0"
+  }
+}
